@@ -92,7 +92,7 @@ const Chart = () => {
         } else if (hour.time.includes("00:00")) {
           data.push({
             begin: idealBegin,
-            end: idealEnd.replace("23:00", "23:59"),
+            end: idealEnd.replace("23:00", "23:59:59"),
             hours: idealArr,
           });
           idealArr = [];
@@ -196,7 +196,9 @@ const Chart = () => {
   }, [clusterData, highlightCluster]);
 
   const lineChartClickHandler = (cluster: ClusterData) => {
-    setHighlightCluster(formatClusterIndex(cluster));
+    const clusterIndex = formatClusterIndex(cluster);
+    setHighlightCluster(clusterIndex);
+    document.getElementById(clusterIndex)?.scrollIntoView();
   };
 
   return (

@@ -6,6 +6,8 @@ export const COLORS = {
   },
   highlight: "#00c19d",
   form: "#222",
+  temp: "#eaac82",
+  humidity: "#6fccdb",
 };
 
 export const SPACING = {

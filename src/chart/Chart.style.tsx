@@ -8,11 +8,16 @@ export const HumidityWrapper = styled.div`
 
   h3 {
     margin-top: 0px;
+    color: ${COLORS.humidity};
   }
 `;
 
 export const TempWrapper = styled(HumidityWrapper)`
   margin-right: ${SPACING.sm};
+
+  h3 {
+    color: ${COLORS.temp};
+  }
 `;
 
 export const ChartWrapper = styled.div`
@@ -47,7 +52,7 @@ export const InputWrapper = styled.div`
 `;
 
 export const IdealClusterWrapper = styled.div`
-  width: 400px;
+  width: 325px;
 `;
 
 interface IdealHourWrapperProps {
@@ -90,11 +95,11 @@ export const IdealHourWrapper = styled.div<IdealHourWrapperProps>`
 export const IdealDateWrapper = styled.div`
   font-size: ${SPACING.sm};
   font-weight: bold;
-  width: 15%;
+  width: 17%;
 `;
 
 export const IdealTimesWrapper = styled.div`
-  width: 45%;
+  width: 43%;
 `;
 
 export const IdealTempWrapper = styled.div`
@@ -110,6 +115,7 @@ export const IdealTempWrapper = styled.div`
 export const DataWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-top: ${SPACING.sm};
 
   @media only screen and (max-width: ${BREAKPOINTS.lg}) {
     display: block;

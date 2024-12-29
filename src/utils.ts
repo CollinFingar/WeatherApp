@@ -22,7 +22,10 @@ export const formatDate = (date: Date) => {
 
 // Format the Date objection to show the time
 export const formatTime = (date: Date) => {
-  return format(date, "p");
+  if (date.getMinutes() === 59) {
+    return format(date, "p");
+  }
+  return format(date, "h a");
 };
 
 // Construct a unique index for finding the cluster on data click

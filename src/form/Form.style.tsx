@@ -5,7 +5,7 @@ export const FormWrapper = styled.div`
   input,
   select {
     display: block;
-    margin: ${SPACING.xs} 32px ${SPACING.sm} 0px;
+    margin: ${SPACING.xs} ${SPACING.md} ${SPACING.sm} 0px;
     background-color: ${COLORS.form};
     border: 2px solid ${COLORS.form};
     color: ${COLORS.text1};

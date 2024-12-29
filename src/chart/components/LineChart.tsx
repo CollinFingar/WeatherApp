@@ -10,6 +10,7 @@ import {
   StateData,
 } from "../../types";
 import { getDate } from "../../utils";
+import { COLORS } from "../../constants";
 
 import { LineChartWrapper } from "./LineChart.style";
 
@@ -119,7 +120,7 @@ const LineChart = ({ data, clusterData, clickHandler }: LineChartProps) => {
         .append("path")
         .datum(data)
         .attr("fill", "none")
-        .attr("stroke", "steelblue")
+        .attr("stroke", COLORS.humidity)
         .attr("stroke-width", 2)
         .attr("d", lineHumidityGenerator);
 
@@ -128,7 +129,7 @@ const LineChart = ({ data, clusterData, clickHandler }: LineChartProps) => {
         .append("path")
         .datum(data)
         .attr("fill", "none")
-        .attr("stroke", "red")
+        .attr("stroke", COLORS.temp)
         .attr("stroke-width", 2)
         .attr("d", lineTempGenerator);
 
